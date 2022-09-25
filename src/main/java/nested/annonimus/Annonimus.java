@@ -5,7 +5,7 @@ import static nested.Application.log;
 public class Annonimus {
 
     public void sayHelloToCounsuls() {
-
+        final String name = "name";
         class EnglishGreating implements HelloNestedClass {
 
             @Override
@@ -21,16 +21,21 @@ public class Annonimus {
 
         HelloNestedClass englishGreating = new EnglishGreating();
 
-        HelloNestedClass Ukraine = new HelloNestedClass() {
+        HelloNestedClass ukraineGreating = new HelloNestedClass() {
             @Override
             public void greet() {
-                log.info("God save the Ukraine!!!");
+                log.info("Slava Ukraine!!!");
             }
 
             @Override
             public void greetSomeone(String someone) {
-                log.info("Hello, friend {}", someone);
+                log.info("Hello, friend {}", name);
             }
         };
+
+        englishGreating.greet();
+        englishGreating.greetSomeone("Joe");
+        ukraineGreating.greet();
+        ukraineGreating.greetSomeone("Jon");
     }
 }

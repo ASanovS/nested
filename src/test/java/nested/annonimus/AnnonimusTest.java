@@ -11,4 +11,10 @@ class AnnonimusTest {
         greating.greet();
         greating.greetSomeone("Joe");
     }
+
+    @Test
+    public void annonimusClass() {
+        Annonimus annonimus = new Annonimus();
+        annonimus.sayHelloToCounsuls();
+    }
 }
