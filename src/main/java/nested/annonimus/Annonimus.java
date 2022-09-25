@@ -31,6 +31,6 @@ public class Annonimus {
             public void greetSomeone(String someone) {
                 log.info("Hello, friend {}", someone);
             }
-        }
+        };
     }
 }
